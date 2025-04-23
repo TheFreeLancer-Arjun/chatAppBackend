@@ -7,7 +7,7 @@ export const server = http.createServer(app);
 
 export const io = new Server(server, {
   cors: {
-    origin: ["https://chat-app-frontend-zeta-lyart.vercel.app"],
+    origin: ["https://d2yb8enwwp04s1.cloudfront.net/signup"],
   },
 });
 
