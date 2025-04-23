@@ -1,7 +1,9 @@
 import jwt from "jsonwebtoken";
 
+
+const JWT_SECRET = "myscretkey";
 export const generateToken = (userID, res) => {
-  const token = jwt.sign({ userID }, myscretkey, {
+  const token = jwt.sign({ userID }, JWT_SECRET, {
     expiresIn: "7d",
   });
 
