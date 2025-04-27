@@ -13,7 +13,7 @@ app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://chat-app-frontend-zeta-lyart.vercel.app",
     credentials: true,
   })
 );
