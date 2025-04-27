@@ -13,8 +13,8 @@ export const generateToken = (userID, res) => {
     // Set the cookie with the JWT token
     res.cookie("jwt", token, {
       maxAge: 7 * 24 * 60 * 60 * 1000, // Cookie expiration in milliseconds
-      httpOnly: true, // Prevent XSS attacks
-      sameSite: "strict", // Protect against CSRF attacks
+       // Prevent XSS attacks
+      // Protect against CSRF attacks
     });
 
     return token;
