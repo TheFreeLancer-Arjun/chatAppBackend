@@ -8,16 +8,18 @@ import { app } from "./lib/socket.js";
 const PORT = 5000;
 
 app.use(express.json({ limit: "10mb" }));
+
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://d2yb8enwwp04s1.cloudfront.net",
+    origin: "https://chat-app-frontend-zeta-lyart.vercel.app",
     credentials: true,
   })
 );
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
+
 
 app.listen(PORT, () => {
   console.log("Server is running on port 5000");
