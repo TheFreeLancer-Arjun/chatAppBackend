@@ -6,13 +6,14 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { app } from "./lib/socket.js";
 const PORT = 5000;
+const allowedOrigin = 'http://localhost:5173';
 
 app.use(express.json({ limit: "10mb" }));
 
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*",
+    origin: allowedOrigin,
     credentials: true,
   })
 );
